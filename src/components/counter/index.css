@@ -1,0 +1,34 @@
+* {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.update {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+    
+    outline: 0;
+    box-shadow: 0 0 8px grey;
+    transition: background-color 0.5s;
+}
+
+.update:hover {
+    background-color: darkorchid;
+}
