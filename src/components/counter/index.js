@@ -7,16 +7,14 @@ export class Counter extends React.Component {
   }
 
   updateCounter = () => {
-    for (let i = 0; i < 10; ++i) {
 
-      // console.log(`Iteration ${i}`);
-      this.setState({
-        count: this.state.count + 1
+    for (let i = 0; i < 10; i = i + 1) {
+      this.setState((currentState) => {
+        return {
+          count: currentState.count + 1
+        }
       })
-      console.log(/*`After iteration ${i}`,*/ this.state.count)
     }
-
-    console.log(/*`After iteration ${i}`,*/ this.state.count)
   }
 
   render() {
@@ -30,7 +28,7 @@ export class Counter extends React.Component {
           onClick={this.updateCounter}
           className='update'
         >
-          Update
+          Update times 10
            </button>
       </div>
     );
