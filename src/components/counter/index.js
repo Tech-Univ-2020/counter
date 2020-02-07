@@ -3,18 +3,15 @@ import './index.css';
 
 export class Counter extends React.Component {
   state = {
-    count: 0
+    count: 0,
   }
 
   updateCounter = () => {
-
-    for (let i = 0; i < 10; i = i + 1) {
-      this.setState((currentState) => {
-        return {
-          count: currentState.count + 1
-        }
-      })
-    }
+    this.setState((currentState) => {
+      return {
+        count: currentState.count + 1
+      }
+    })
   }
 
   render() {
@@ -28,8 +25,12 @@ export class Counter extends React.Component {
           onClick={this.updateCounter}
           className='update'
         >
-          Update times 10
+          Update
            </button>
+        {
+          this.state.count === 3 &&
+          <div class='party'>Yeah, it's a party!</div>
+        }
       </div>
     );
   }

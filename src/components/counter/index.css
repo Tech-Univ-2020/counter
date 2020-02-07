@@ -37,3 +37,8 @@
     transform: translateY(0.4rem);
     box-shadow: 0 0 1rem #333;
 }
+
+.party {
+    font-size: 2rem;
+    margin: 1rem;
+}
